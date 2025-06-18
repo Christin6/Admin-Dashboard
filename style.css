@@ -1,0 +1,9 @@
+body {
+    display: flex;
+}
+
+#top-nav,
+#bottom-nav {
+    display: flex;
+    align-items: center;
+}
