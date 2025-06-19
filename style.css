@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
 /* Table of Contents
 RESET
 VARIABLES
@@ -84,21 +86,57 @@ h6 {
 /* VARIABLES */
 :root {
 	--accent-color: #119dee;
+    --side-bar-fg-color: white;
+    --main-font: "Roboto", sans-serif;
 }
 
 /* LAYOUT */
 body {
 	display: grid;
 	grid-template-columns: 20% 80%;
+    font-family: var(--main-font);
+}
+
+svg {
+    width: 1.5rem;
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+
+#side-bar p,
+#side-bar h1 {
+    display: inline-block;
+}
+
+#title,
+#side-bar a {
+    display: flex;
+    align-items: center;
+    font-size: large;
 }
 
 #side-bar {
 	background-color: var(--accent-color);
-	color: white;
+    padding: 1rem;
 }
 
-#top-nav,
-#bottom-nav {
-	display: flex;
-	align-items: center;
+#title > svg {
+    width: 3rem;
+}
+
+#side-bar,
+#sections-nav > a,
+#other-nav > a {
+    color: var(--side-bar-fg-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#side-bar > div {
+    margin-bottom: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 70px 100px 1fr;
 }
