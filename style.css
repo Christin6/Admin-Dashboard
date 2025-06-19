@@ -110,11 +110,13 @@ button {
 
 .profile-pic {
     width: 3rem;
+    height: 3rem;
     border-radius: 2rem;
 }
 
 .big-profile-pic {
     width: 4rem;
+    height: 4rem;
     border-radius: 3rem;
     margin-right: 1rem;
 }
@@ -239,7 +241,7 @@ header button {
     height: calc(100vh - 170px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50%);
     grid-template-areas: 
         "projects projects announcement"
         "projects projects trending"
@@ -254,8 +256,8 @@ header button {
 #project-cards-grid,
 #announcements > div,
 #trending > div {
-    height: 100%;
     overflow: scroll;
+    margin-right: 1rem;
 }
 
 .project-card,
@@ -271,6 +273,7 @@ header button {
 }
 
 #project-cards-grid {
+    height: 95%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -297,6 +300,24 @@ header button {
     grid-area: announcement;
 }
 
+#announcements > div {
+    height: 80%;
+}
+
+
 #trending {
     grid-area: trending;
+}
+
+#trending > div {
+    height: 90%;
+}
+
+.trending-user {
+    display: flex;
+    height: 5rem;
+}
+
+.trending-user-text {
+    height: fit-content;
 }
