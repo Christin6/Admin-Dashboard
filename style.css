@@ -87,6 +87,9 @@ h6 {
 :root {
 	--accent-color: #119dee;
     --side-bar-fg-color: white;
+    --top-bottom-bar-bg: white;
+    --main-bg-color: #e2e8f0;
+    --card-color: white;
     --main-font: "Roboto", sans-serif;
 }
 
@@ -95,6 +98,7 @@ body {
 	display: grid;
 	grid-template-columns: 20% 80%;
     font-family: var(--main-font);
+    height: 100vh;
 }
 
 svg {
@@ -139,4 +143,70 @@ svg {
 main {
     display: grid;
     grid-template-rows: 70px 100px 1fr;
+}
+
+#top-nav,
+#bottom-nav {
+    background-color: var(--top-bottom-bar-bg);
+}
+
+#top-nav {
+    display: grid;
+    grid-template-columns: 7fr 1fr 2fr;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 3rem;
+    border-radius: 2rem;
+}
+
+#bottom-nav {
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr 1fr;
+}
+
+.big-profile-pic {
+    width: 5rem;
+    border-radius: 3rem;
+}
+
+#user-info {
+    display: flex;
+}
+
+#main-section {
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "projects projects announcement"
+        "projects projects trending"
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#project-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.project-card {
+    background-color: var(--card-color);
+}
+
+#announcement {
+    grid-area: announcement;
+}
+
+#trending {
+    grid-area: trending;
 }
